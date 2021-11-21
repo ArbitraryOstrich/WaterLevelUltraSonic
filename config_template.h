@@ -32,3 +32,12 @@ const int bounceBackPin = 26;
 long duration;
 float distanceCm;
 float distanceInch;
+// Time Keeping for loops
+int polling_rate = 5000;
+int send_info_rate = 10000;
+unsigned long currentMillis = 0;
+unsigned long last_poll_Millis = 0;
+unsigned long last_info_Millis = 0;
+
+
+NewPing sonar(triggerPin, echoPin, 700);
